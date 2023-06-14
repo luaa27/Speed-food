@@ -1,4 +1,4 @@
-/* RESET DE PÁGINA */
+
 
 * {
     margin: 0;
@@ -14,9 +14,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* HEADER */
-
 header {
     display: flex;
     align-items: center;
@@ -24,8 +21,6 @@ header {
     padding-left: 100px;
 }
 
-
-/* MARCA (BRAZILIAN COFFEE) */
 
 h1 {
     font-family: 'Poppins';
@@ -38,7 +33,7 @@ h1 {
 }
 
 
-/* CONTAINER DE INFORMAÇÕES */
+
 
 .information__container {
     display: flex;
@@ -48,7 +43,7 @@ h1 {
 }
 
 
-/* ESTILIZAÇÃO FAIXA DE OPÇÕES */
+
 
 .options {
     display: flex;
@@ -61,7 +56,7 @@ h1 {
 }
 
 
-/* ANIMAÇÃO DAS OPÇÕES */
+
 
 .option::after {
     content: '';
@@ -83,8 +78,6 @@ h1 {
 }
 
 
-/* ESTILIZAÇÃO ÍCONES */
-
 .icons {
     display: flex;
     justify-content: center;
@@ -103,9 +96,6 @@ svg:hover {
     cursor: pointer;
 }
 
-
-/* ESTILIZAÇÃO DO BOTÃO SUPERIOR */
-
 #button__top {
     width: 143px;
     height: 50px;
@@ -117,8 +107,6 @@ svg:hover {
 }
 
 
-/* ESTILIZAÇÃO IMAGEM DE FUNDO */
-
 img[alt~=background] {
     position: absolute;
     right: 0;
@@ -128,7 +116,7 @@ img[alt~=background] {
 }
 
 
-/* ESTILIZAÇÃO DO LAYOUT PRINCIPAL */
+
 
 main {
     display: flex;
@@ -140,7 +128,7 @@ main {
 }
 
 
-/* ESTILIZAÇÃO DO TÍTULO */
+
 
 .headline {
     font-family: 'Poppins';
@@ -163,7 +151,7 @@ main {
 }
 
 
-/* ESTILIZAÇÃO DO SUBTÍTULO */
+
 
 .subtitle {
     font-family: 'Poppins';
@@ -174,23 +162,19 @@ main {
     letter-spacing: 0.05em;
 }
 
+.alface{
+        z-index: index -3; 
+     }
 
-/* ESTILIZAÇÃO DO CONTAINER DOS BOTÕES */
 
 .buttons {
     display: flex;
     gap: 42px;
 }
-
-
-/* BARRA DE NAGEAÇÃO (3 BARRINHAS) */
-
 .navbar {
     display: none;
 }
 
-
-/* ESTILIZAÇÃO DOS BOTÕES */
 
 .button {
     background-color: #ffffff;
@@ -207,7 +191,6 @@ main {
     letter-spacing: 0.05em;
     transition: 0.2s;
 }
-
 .button:hover {
     background-color: #fafafa;
     color: #FF6B00;
@@ -231,17 +214,12 @@ main {
 }
 
 
-/* ESTILIZAÇÃO DA SALADA */
-
 img[alt~=salad] {
     position: absolute;
     width: 40em;
     top: 22%;
     right: 12%;
 }
-
-
-/* ESTILIZAÇÃO FOOTER */
 
 footer {
     display: flex;
@@ -251,42 +229,34 @@ footer {
 }
 
 
-/* RESPONSIVIDADE TABLET */
-
 @media (max-width: 1024px) {
     body {
         grid-template-rows: 90px 1fr 96px;
     }
 
-    /* ESTILIZAÇÃO HEADER */
-    
     header {
         padding-left: 2em;
     }
     
-    /* ESTILIZAÇÃO LOGO */
     
     h1 {
         font-size: 1em;
     }
     
-    /* REMOVENDO OPÇÕES */
     
     .options {
         display: none;
     }
     
-    /*  ESTILIZAÇÃO ÍCONES */
     
     .icons {
         gap: 10px;
     }
     
     img[alt~=icons] {
-        width: 20px;
+        width: 240px;
     }
     
-    /* ESTILIZAÇÃO DO BOTÃO SUPERIOR */
     
     #button__top {
         width: 130px;
@@ -294,13 +264,11 @@ footer {
         font-size: 0.9rem;
     }
     
-    /* ESTILIZAÇÃO DO FUNDO */
     
     img[alt~=background] {
         width: 450px;
     }
     
-    /* ESTILIZAÇÃO DA BARRA DE NAVEGAÇÃO */
     
     .navbar {
         display: grid;
@@ -316,8 +284,6 @@ footer {
         border-radius: 15px;
     }
     
-    /* ESTILIZAÇÃO LAYOUT PRINCIPAL */
-    
     main {
         display: flex;
         flex-direction: column;
@@ -329,16 +295,12 @@ footer {
         padding-left: 0;
         place-self: center;
     }
-    
-    /* ESTILIZAÇÃO SALADA */
-    
+        
     img[alt~=salad] {
         position: static;
-        width: 40em;
+        width: 24000em;
         place-self: center center;
     }
-    
-    /* ESTILIZAÇÃO TÍTULO E SUBTÍTULO */
     
     .headline {
         text-align: center;
@@ -356,7 +318,7 @@ footer {
 }
 
 
-/* RESPONSIVIDADE CELULAR */
+
 
 @media (max-width: 767px) {
     
@@ -364,37 +326,35 @@ footer {
         grid-template-rows: 54px 1fr 48px;
     
     }
-    /* ESTILIZAÇÃO DO HEADER */
+
     
     header {
         padding: 25px 12px 0 12px;
     }
 
-    /* REMOÇÃO DOS ÍCONES */
-
     .icons {
         display: none;
     }
 
-    /* ESTILIZAÇÃO LOGO */
 
     h1 {
         font-size: 0.75rem;
     }
 
-    /* ESTILIZAÇÃO FUNDO */
 
     img[alt~=background] {
         width: 200px;
     }
 
-    /* ESTILIZAÇÃO SALADA */
 
+
+    
+    
     img[alt~=salad] {
-        width: 20px;
+        width: 320px;
     }
 
-    /* ESTILIZAÇÃO BOTÃO SUPERIOR */
+
 
     #button__top {
         width: 94px;
@@ -407,8 +367,6 @@ footer {
     #button_top:hover {
         transform: scale(1.1);
     }
-
-    /* ESTILIZAÇÃO BARRA DE NAVEGAÇÃO */
 
     .information__container {
         gap: 12px;
@@ -425,9 +383,6 @@ footer {
         height: 2px;
         border-radius: 15px;
     }
-
-    /* ESTILIZAÇÃO TÍTULO E SUBTÍTULO */
-
     .headline {
         text-align: center;
         font-size: 1.38rem;
@@ -443,8 +398,6 @@ footer {
     .subtitle {
         display: none;
     }
-
-    /* ESTILIZAÇÃO BOTÕES */
 
     .buttons {
         flex-direction: column;
