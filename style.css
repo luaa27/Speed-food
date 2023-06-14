@@ -1,0 +1,459 @@
+/* RESET DE PÁGINA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    background-color: #fafafa;
+    grid-template-rows: 125px 1fr 125px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+
+/* MARCA (BRAZILIAN COFFEE) */
+
+h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #FF6B00;
+}
+
+
+/* CONTAINER DE INFORMAÇÕES */
+
+.information__container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 30px;
+}
+
+
+/* ESTILIZAÇÃO FAIXA DE OPÇÕES */
+
+.options {
+    display: flex;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    gap: 20px;
+}
+
+
+/* ANIMAÇÃO DAS OPÇÕES */
+
+.option::after {
+    content: '';
+    display: block;
+    width: auto;
+    height: 2px;
+    background-color: #FF6B00;
+    border-radius: 10px;
+    opacity: 0;
+    transition-duration: 0.4s;
+}
+
+.option:hover::after {
+    opacity: 1;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+
+/* ESTILIZAÇÃO ÍCONES */
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+svg[alt~=icons] {
+    width: 90px;
+}
+
+svg:hover path {
+    stroke: #FF6B00;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+
+/* ESTILIZAÇÃO DO BOTÃO SUPERIOR */
+
+#button__top {
+    width: 143px;
+    height: 50px;
+}
+
+#button__top:hover {
+    background-color: #FF6B00;
+    color: white;
+}
+
+
+/* ESTILIZAÇÃO IMAGEM DE FUNDO */
+
+img[alt~=background] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 780px;
+}
+
+
+/* ESTILIZAÇÃO DO LAYOUT PRINCIPAL */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5em;
+    padding-left: 100px;
+    width: 48%;
+}
+
+
+/* ESTILIZAÇÃO DO TÍTULO */
+
+.headline {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    width: 389px;
+}
+.sub {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #FF6B00;
+}
+
+
+/* ESTILIZAÇÃO DO SUBTÍTULO */
+
+.subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25em;
+    line-height: 37px;
+    letter-spacing: 0.05em;
+}
+
+
+/* ESTILIZAÇÃO DO CONTAINER DOS BOTÕES */
+
+.buttons {
+    display: flex;
+    gap: 42px;
+}
+
+
+/* BARRA DE NAGEAÇÃO (3 BARRINHAS) */
+
+.navbar {
+    display: none;
+}
+
+
+/* ESTILIZAÇÃO DOS BOTÕES */
+
+.button {
+    background-color: #ffffff;
+    width: 195px;
+    height: 54px;
+    border-radius: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: #fafafa;
+    color: #FF6B00;
+    border: solid;
+    border-color: #FF6B00;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#green {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+}
+
+#green:hover {
+    background-color: #fafafa;
+    color: #FFB800;
+    border: solid;
+    border-color: #FFB800;
+    cursor: pointer;
+}
+
+
+/* ESTILIZAÇÃO DA SALADA */
+
+img[alt~=salad] {
+    position: absolute;
+    width: 40em;
+    top: 22%;
+    right: 12%;
+}
+
+
+/* ESTILIZAÇÃO FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #285a5f;
+}
+
+
+/* RESPONSIVIDADE TABLET */
+
+@media (max-width: 1024px) {
+    body {
+        grid-template-rows: 90px 1fr 96px;
+    }
+
+    /* ESTILIZAÇÃO HEADER */
+    
+    header {
+        padding-left: 2em;
+    }
+    
+    /* ESTILIZAÇÃO LOGO */
+    
+    h1 {
+        font-size: 1em;
+    }
+    
+    /* REMOVENDO OPÇÕES */
+    
+    .options {
+        display: none;
+    }
+    
+    /*  ESTILIZAÇÃO ÍCONES */
+    
+    .icons {
+        gap: 10px;
+    }
+    
+    img[alt~=icons] {
+        width: 20px;
+    }
+    
+    /* ESTILIZAÇÃO DO BOTÃO SUPERIOR */
+    
+    #button__top {
+        width: 130px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    /* ESTILIZAÇÃO DO FUNDO */
+    
+    img[alt~=background] {
+        width: 450px;
+    }
+    
+    /* ESTILIZAÇÃO DA BARRA DE NAVEGAÇÃO */
+    
+    .navbar {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .barra {
+        background-color: white;
+        width: 44px;
+        height: 3px;
+        border-radius: 15px;
+    }
+    
+    /* ESTILIZAÇÃO LAYOUT PRINCIPAL */
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        place-self: center;
+    }
+    
+    /* ESTILIZAÇÃO SALADA */
+    
+    img[alt~=salad] {
+        position: static;
+        width: 40em;
+        place-self: center center;
+    }
+    
+    /* ESTILIZAÇÃO TÍTULO E SUBTÍTULO */
+    
+    .headline {
+        text-align: center;
+        font-size: 3em;
+        line-height: 80px;
+    }
+    
+    .subtitle {
+        text-align: center;
+        font-size: 1.25em;
+        line-height: 40px;
+        letter-spacing: 0.05em;
+        width: 80%;
+    }
+}
+
+
+/* RESPONSIVIDADE CELULAR */
+
+@media (max-width: 767px) {
+    
+    body {
+        grid-template-rows: 54px 1fr 48px;
+    
+    }
+    /* ESTILIZAÇÃO DO HEADER */
+    
+    header {
+        padding: 25px 12px 0 12px;
+    }
+
+    /* REMOÇÃO DOS ÍCONES */
+
+    .icons {
+        display: none;
+    }
+
+    /* ESTILIZAÇÃO LOGO */
+
+    h1 {
+        font-size: 0.75rem;
+    }
+
+    /* ESTILIZAÇÃO FUNDO */
+
+    img[alt~=background] {
+        width: 200px;
+    }
+
+    /* ESTILIZAÇÃO SALADA */
+
+    img[alt~=salad] {
+        width: 20px;
+    }
+
+    /* ESTILIZAÇÃO BOTÃO SUPERIOR */
+
+    #button__top {
+        width: 94px;
+        height: 28px;
+        font-size: 0.75rem;
+        border-radius: 5px;
+        line-height: 10px;
+    }
+
+    #button_top:hover {
+        transform: scale(1.1);
+    }
+
+    /* ESTILIZAÇÃO BARRA DE NAVEGAÇÃO */
+
+    .information__container {
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    .navbar {
+        gap: 6px;
+    }
+
+    .barra {
+        background-color: white;
+        width: 24px;
+        height: 2px;
+        border-radius: 15px;
+    }
+
+    /* ESTILIZAÇÃO TÍTULO E SUBTÍTULO */
+
+    .headline {
+        text-align: center;
+        font-size: 1.38rem;
+        line-height: 40px;
+    }
+
+    main {
+        width: 90%;
+        place-self: center center;
+        gap: 10px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    /* ESTILIZAÇÃO BOTÕES */
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .button {
+        width: 248px;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
